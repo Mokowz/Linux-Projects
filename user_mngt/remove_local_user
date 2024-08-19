@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Remove the local user and its home directory
+# Pass the username as an argument to this script
+
+sudo userdel -r $1
+
+# Confirm the user is deleted
+id $1

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Create a local user (john)
+sudo useradd john
+
+# View the user in the /etc/passwd file
+awk -F':' ' /john/ {print} ' /etc/passwd
+
+# View the user and group ID
+id john

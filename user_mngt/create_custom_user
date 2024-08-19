@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Create a user and add them to the sudo group
+# Pass the username as the first argument
+user=$1
+
+# Create the user
+sudo useradd $user
+
+#Confirm that the user has been created
+echo "User Before Modification"
+id $user
+
+sleep 3
+# Modify the user (add them to the secondary group)
+sudo usermod -G sudo $user
+
+echo -e "\nUser After Modification"
+id $user
