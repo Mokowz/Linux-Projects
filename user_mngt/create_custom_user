@@ -12,7 +12,7 @@ id $user
 
 sleep 3
 # Modify the user (add them to the secondary group)
-sudo usermod -G sudo $user
+sudo usermod -aG sudo $user
 
 echo -e "\nUser After Modification"
 id $user
